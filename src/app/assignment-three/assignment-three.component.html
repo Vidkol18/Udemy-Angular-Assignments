@@ -1,0 +1,6 @@
+<p *ngIf="shouldDisplay" class="text-center">Secret Password: MaxIsGreat</p>
+<div class="d-grid gap-2">
+    <input class="btn btn-primary" type="button" value="Display Details" (click)="toggleDisplay()" />
+</div>
+
+<p [ngStyle]="{ backgroundColor: shouldChangeColor(indexOfArray) ? 'blue' : 'transparent' }" [ngClass]="{ moreThanFive: shouldChangeColor(indexOfArray) }" *ngFor="let click of buttonClicks; let indexOfArray = index">{{ click }}</p>
